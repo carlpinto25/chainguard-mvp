@@ -1,0 +1,22 @@
+{
+  "name": "chainguard-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local procure-to-pay safety demo with a server-side enforcement gate.",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "test": "node --test test/*.test.js",
+    "check": "node --check engine.js && node --check lib/api.js && node --check lib/runtime.js && node --check next.config.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  }
+}
